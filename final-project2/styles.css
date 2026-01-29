@@ -1,119 +1,132 @@
-
 html, body {
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  color: #333333;
+    margin-top: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: #333333;
+}
+body, .contact-input, .contact-textarea  {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 8vh;
 }
 
-body,
-.contact-input,
-.contact-textarea,
-.contact-submit-button {
-  font-family: 'Poppins', sans-serif;
+.fixed-header {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-self: center;
+    z-index: 1;
+    padding: 0px;
+    height: 10vh;
 }
-
+/* 
+main {
+    padding: 8vh;
+} */
 
 .contact-page {
-  min-height: 100vh;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: visible;
-  padding: 24px 16px;
+    min-height: 100vh;
+    max-width: 900px;
+    overflow: auto;
+    margin: 0 auto;
 }
-
 .contact-form-section {
-  display: flex;
-  gap: 24px;
-  width: 100%;
-  max-width: 800px;  
-  padding: 30px;
-  margin: 0 auto;
-  flex-wrap: wrap;    
+    display: flex;
+    width: 800px;
+    padding: 30px;
+    margin: 0 auto;
+
 }
-
-
 .contact-image {
-  width: 100%;
-  max-width: 360px;
-  height: auto;
-  transform: none;     /
-  margin: 0;
+    transform: rotate(90deg);
+    width: 900px;
+    margin-left: -60px;
+    z-index: -1;
 }
-
-
 .contact-form-heading {
-  font-size: 48px; 
-  font-weight: 700;
-  margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
 }
-
 .contact-form-heading span {
-  color: #007000;
+    color: #007000;
 }
-
 .contact-form-intro {
-  font-size: 20px;
-  margin-bottom: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
 }
-
-
-.contact-input,
-.contact-textarea {
-  display: block;
-  width: 100%;
-  margin: 5px 0 15px;
-  border-radius: 20px;
-  padding: 10px 16px;
-  font-size: 1rem;       
-  border: 2px solid #333333;
-}
-
-.contact-textarea {
-  min-height: 140px;
-  resize: vertical;      
-}
-
-.contact-input::placeholder,
-.contact-textarea::placeholder {
-  color: #666666;        /
-}
-
-
-.contact-submit-button {
-  border: 2px solid #333333;
-  padding: 10px 16px;
-  border-radius: 40px;
-  margin-top: 10px;
-  width: 100%;
-  max-width: 200px;
-  cursor: pointer;
-  background: transparent;
-}
-
-.contact-submit-button:hover {
-  background-color: #dddddd;
-}
-
-.contact-input:focus-visible,
-.contact-textarea:focus-visible,
-.contact-submit-button:focus-visible {
-  outline: 3px solid #007000;
-  outline-offset: 3px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    scroll-behavior: auto !important;
-    transition: none !important;
-  }
-}
-
-@media (max-width: 520px) {
-  .contact-form-heading {
-    font-size: 2rem;
-  }
-  .contact-form-intro {
+.contact-input {
+    display: block;
+    width: 300px;
+    margin: 5px auto 15px;
+    border-radius: 20px;
+    padding: 8px 20px;
     font-size: 1rem;
+    border: 2px solid #333333;
+}
+.contact-textarea {
+    max-width: 300px;
+    margin: 5px auto 15px;
+    padding: 16px 20px;
+    border: 2px solid #333333;
+    border-radius: 20px;
+}
+.contact-input::-webkit-input-placeholder, .contact-textarea::-webkit-input-placeholder {
+    color: #555555;
+}
+.contact-submit-button {
+    border: 2px solid #333333;
+    padding: 8px 20px;
+    border-radius: 40px;
+    margin: 10px auto 0;
+    width: 200px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+.contact-submit-button:hover {
+    background-color: #dddddd;
+}
+
+footer {
+    margin-left: 40px;
+    font-size: 1rem;
+    padding-bottom: 50px;
+}
+
+.egg {
+    width: 100px;
+    opacity: 0%;
+}
+
+.egg:focus {
+    opacity: 100%;
+    width: 100px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 800px) {
+ul {
+    flex-direction: column;
   }
 }
+
+/* 
+Challenge: Identify all accessibility issues using all your newly aquired knowledge.
+
+Write them down here:
+- overflow: hidden on .contact-page
+- No visible focus styles
+- Placeholders used instead of labels
+- Low contrast placeholder text
+- Hover-only button styles
+- Fixed widths everywhere
+- missing alt text 
+- lack of proper labeling 
+
+*/

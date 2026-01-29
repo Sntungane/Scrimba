@@ -1,26 +1,47 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
         
+ 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="styles.css">
+        <title>Scrimba Challenge</title>
+
     </head>
     <body class="contact-page">
-        <div id="main">
-            <div class="contact-form-section">
+        <header class="fixed-header">
+            <nav role="navigation" aria-label="Helpful Links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            
+            <section class="contact-form-section" aria-labelledby="contact form">
                 <form>
-                    <h2 class="contact-form-heading">Reach <span>Out</span></h2>
+                    <h1 class="contact-form-heading">Reach <span>Out</span></h1>
                     <div class="contact-form-intro">Curious about something? Complete these fields and "get in touch", as you humans say. </div>
-                    <input class="contact-input" type="text" placeholder="Full name" />
-                    <input class="contact-input" type="text" placeholder="Email" />
-                    <textarea class="contact-textarea" rows="4" cols="50" placeholder="Your message..."></textarea>
-                    <button class="contact-submit-button" type="button" onclick="submitForm()">Done </button>
+                    <label for="name">Full name</label>
+                    <input required class="contact-input" id="name" type="text" placeholder="Isaac Asimov" aria-required="true"/>
+                    <label for="email">Email</label>
+                    <input class="contact-input" id="name" type="text" placeholder="isaac@irobot.com" />
+                    <label for="message">Message</label>
+                    <textarea class="contact-textarea" rows="4" cols="50" id="message" placeholder="Your message..."></textarea>
+                    <button class="contact-submit-button" type="button" onclick="submitForm()">Send message 🎉</button>
                 </form>
-                <img class="contact-image" src="images/connect.jpg" />
-            </div>
-        </div>
+                <img class="contact-image" src="images/connect.jpg" alt="A human hand reaching for a white robot hand."/>
+            </section>
+        </main>
+        <footer>We can't wait to hear from you!
+            <img class="egg" tabindex="0" src="./images/" alt="a colorful easter egg"/>
+        </footer>
     </body>
 </html>
